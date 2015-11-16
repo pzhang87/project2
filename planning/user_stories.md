@@ -2,6 +2,8 @@
 
 ##Bronze Tier
 
+###Teams
+
 * As a user, I should be able to create a new team which can enter and participate in tournaments.
 
 * As a user, I should be able to view my team profile - including a logo, list of players, and a description.
@@ -11,17 +13,23 @@ and I can participate in the tournament.
 
 * As a user, I should be able to view all other teams so I can see who else might be participating in a tournament.
 
+###Tournaments
+
 * As a user, I should be able to create a new tournament for teams to
 participate in so I can act as a tournament host.
 
 * As a user, I should be able to view all ongoing tournaments to see which ones
 I would like my team to participate in.
 
+* As a tournament host, I should be able to add a description, image as well as an external link to the bracket page to provide information for tournament participants.
+
 * As a tournament host, I should be able to delete any tournaments that I no longer desire to host, so that other players/teams won't sign up for them.
 
-Summary: CRUD for teams, CRUD for tournaments.
+Summary: CRUD for teams, CRUD for tournaments, some roles/authorizations.
 
 ##Silver Tier
+
+###Users > Players
 
 * As a user, I should be able to register and sign up for teams that I am interested in playing for.
 
@@ -34,10 +42,20 @@ on that team.
 
 * As a user, I should be able to view all the tournaments that my team is participating in.
 
-Summary: Extend User model to relate to Tournaments and Teams, establish roles and authorization for team owners/users/hosts.
+Summary: Extend User/Player model to relate to Tournaments and Teams, establish roles and authorization for team owners/users/hosts.
 
 ##Gold Tier
-* As a tournament host, I should be able to create game pages for my tournament
+* As a tournament host, I should be able to create a round-robin tournament.
+
+* As a tournament host, I should be able to create match pages for my tournament
 so as to provide information to participants on how and when to play their games.
 
-* As a user, I should be able to see the tournament bracket for which my team is playing in so I have an idea of the overall tournament structure.
+* As a user, I should be able to see a list of matches my team needs to play in from the tournament page.
+
+* As a user, I should be able to report results for my matches to progress the process of the tournament.
+
+##Platinum Tier
+
+* As a user, I should be able to see the in-game rankings of other users to better scope out the competition. (External API)
+
+* As a tournament host, I should be able to choose from different tournament options as to what is appropriate for my

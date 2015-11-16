@@ -16,13 +16,13 @@ teams, which can participate in tournaments via games.
 - Team Name
 - Team Leader (owner)
 - Team Logo/Photo
-- Team Rank
+- Team Rank**
 
 ####Tournament
 - Tournament Name
 - Tournament Date (range?)
 - Type of Tournament (Round Robin, Single/Double Elimination, Groups)
 
-####Games
+####Games/Matches
 - Tournament ID (belongs to Tournament)
 - Series Type (Bo3, Bo5, etc.)
