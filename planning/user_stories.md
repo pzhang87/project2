@@ -27,6 +27,8 @@ I would like my team to participate in.
 
 Summary: CRUD for teams, CRUD for tournaments, some roles/authorizations.
 
+++ Registration (JOIN TABLES)
+
 ##Silver Tier
 
 ###Users > Players
