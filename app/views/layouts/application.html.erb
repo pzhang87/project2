@@ -8,6 +8,23 @@
 </head>
 <body>
 
+  <h1>Scarlet.gg</h1>
+    <nav>
+      <ul>
+        <li><%= link_to "Teams", teams_path %></li>
+        <li><%= link_to "Tournaments", "#" %></li>
+        <% if current_user %>
+        <li><%= link_to "New Team", new_team_path %></li>
+        <li><%= link_to "New Tournament", "#" %></li>
+        <li><%= link_to 'Profile', "profile" %></li>
+        <li><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></li>
+        <% else %>
+            <li><%= link_to 'Signup', new_user_registration_path %></li>
+            <li><%= link_to 'Login', new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+
 <div class="notice"><%= notice %></div>
 <div class="alert"><%= alert %></div>
 

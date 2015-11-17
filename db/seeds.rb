@@ -26,3 +26,10 @@ User.create([
   {email: "a_margatroid@fom.gsk", password: "puppeteer", password_confirmation: "puppeteer", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-02-06 14:02:10", last_sign_in_at: "2015-02-06 14:02:10", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1"}
 
   ])
+
+Team.create([
+  {team_name: "Scarlet Devil Mansion", team_description: "CHARISMA BREAK", team_logo: "https://www.placecage.com/400/300"},
+  {team_name: "Hakurei Shrine", team_description: "true poverty", team_logo: "https://www.placecage.com/400/300"},
+  {team_name: "Netherworld Team", team_description: "food tour extravaganza", team_logo: "https://www.placecage.com/400/300"},
+  {team_name: "Magic Team", team_description: "xXxMaLiCEcAnnOn420xXx", team_logo: "https://www.placecage.com/400/300"}
+  ])

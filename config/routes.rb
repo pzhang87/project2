@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "teams#index"
   devise_for :users
   resources :teams
   # The priority is based upon order of creation: first created -> highest priority.

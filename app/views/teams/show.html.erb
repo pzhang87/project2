@@ -1,0 +1,10 @@
+<div class="team_name"><h2><%= @team.team_name %></h2></div>
+<div class="team_logo"><%=image_tag @team.team_logo%></div>
+<div class="team_description"><%=@team.team_description%></div>
+<div class="team_edit"><%= link_to "Edit Team", edit_team_path%>
+<div class="team_users">
+  <ul>
+    <% @team.users.each do |user|%>
+      <li><%=user.username%></li>
+    <% end %>
+  </ul>

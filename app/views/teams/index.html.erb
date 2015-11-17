@@ -1,0 +1,7 @@
+<h2>Teams</h2>
+
+<% @teams.each do |team| %>
+  <li>
+    <h3><%=link_to team.team_name, team_path(team)%></h3>
+    <% end %>
+  </li>

@@ -1,0 +1,23 @@
+<%=form_for @team do |f| %>
+  <p>
+    <%= f.label :team_name%>
+  </p>
+  <p>
+    <%= f.text_field :team_name %>
+  </p>
+  <p>
+    <%= f.label :team_logo, "Team Logo (URL)"%>
+  </p>
+  <p>
+    <%= f.text_field :team_logo %>
+  </p>
+  <p>
+    <%= f.label :team_description%>
+  </p>
+  <p>
+    <%= f.text_area :team_description%>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
