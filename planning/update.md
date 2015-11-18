@@ -20,3 +20,7 @@ Areas that need work:
 
 * need - update join tables Tournaments-Registration(Join)-Teams
 * maybe also Teams-Team_Membership(Join)-Users
+
+#2015-11-18 1700EST - Update 3
+
+* start with nested registrations within tournaments (since that's what makes the most sense)
