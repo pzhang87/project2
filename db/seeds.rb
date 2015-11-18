@@ -37,8 +37,8 @@ Team.create([
   ])
 
 Tournament.create([
-  {tournament_name: "TL_SOKU INVITATIONAL", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8},
-  {tournament_name: "Corner Assault 13", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8},
-  {tournament_name: "Collegiate Starleague Season 10", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8},
-  {tournament_name: "IGN Proleague 6", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8}
+  {tournament_name: "TL_SOKU INVITATIONAL", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8, tournament_banner: "https://www.placecage.com/1200/300", tournament_description: "blah blah"},
+  {tournament_name: "Corner Assault 13", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8, tournament_banner: "https://www.placecage.com/1200/300", tournament_description: "blah blah"},
+  {tournament_name: "Collegiate Starleague Season 10", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8, tournament_banner: "https://www.placecage.com/1200/300", tournament_description: "blah blah"},
+  {tournament_name: "IGN Proleague 6", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8, tournament_banner: "https://www.placecage.com/1200/300", tournament_description: "blah blah"}
 ])
