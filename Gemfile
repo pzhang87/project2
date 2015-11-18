@@ -47,3 +47,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Devise for user authentication
 gem 'devise'
+
+# CanCanCan for user authorizations
+
+gem 'cancancan', '~> 1.10'
