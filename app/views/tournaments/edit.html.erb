@@ -1,0 +1,8 @@
+<h2>Edit Team</h2>
+
+<%= render partial: "form" %>
+
+
+<%=form_for @tournament, method: "delete" do |f| %>
+  <%= f.submit "Delete Tournament", class: "delete"%>
+<% end %>

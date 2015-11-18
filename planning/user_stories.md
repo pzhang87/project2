@@ -4,22 +4,22 @@
 
 ###Teams
 
-* As a user, I should be able to create a new team which can enter and participate in tournaments.
+* As a user, I should be able to create a new team which can enter and participate in tournaments. X
 
-* As a user, I should be able to view my team profile - including a logo, list of players, and a description.
+* As a user, I should be able to view my team profile - including a logo, list of players, and a description. (no list of players yet - need to associate teams and users)
 
 * As a team owner, I should be able to add my team to a tournament, so my team
 and I can participate in the tournament.
 
-* As a user, I should be able to view all other teams so I can see who else might be participating in a tournament.
+* As a user, I should be able to view all other teams so I can see who else might be participating in a tournament. X
 
 ###Tournaments
 
 * As a user, I should be able to create a new tournament for teams to
-participate in so I can act as a tournament host.
+participate in so I can act as a tournament host. X
 
 * As a user, I should be able to view all ongoing tournaments to see which ones
-I would like my team to participate in.
+I would like my team to participate in. X
 
 * As a tournament host, I should be able to add a description, image as well as an external link to the bracket page to provide information for tournament participants.
 

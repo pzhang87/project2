@@ -5,7 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+User.destroy_all
+Team.destroy_all
+Tournament.destroy_all
 
 User.create([
   {email: "r_scarlet@sdm.gsk", password: "septette", password_confirmation: "septette", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-02-06 14:02:10", last_sign_in_at: "2015-02-06 14:02:10", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1"},
@@ -33,3 +35,10 @@ Team.create([
   {team_name: "Netherworld Team", team_description: "food tour extravaganza", team_logo: "https://www.placecage.com/400/300"},
   {team_name: "Magic Team", team_description: "xXxMaLiCEcAnnOn420xXx", team_logo: "https://www.placecage.com/400/300"}
   ])
+
+Tournament.create([
+  {tournament_name: "TL_SOKU INVITATIONAL", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8},
+  {tournament_name: "Corner Assault 13", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8},
+  {tournament_name: "Collegiate Starleague Season 10", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8},
+  {tournament_name: "IGN Proleague 6", tournament_start: "2015-12-03 18:00:00", tournament_end: "2015-12-04 18:00:00", tournament_type: "Round-robin", max_teams: 8}
+])

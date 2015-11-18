@@ -1,0 +1,38 @@
+<%=form_for @tournament do |f| %>
+  <p>
+    <%= f.label :tournament_name%>
+  </p>
+  <p>
+    <%= f.text_field :tournament_name %>
+  </p>
+  <p>
+    <%= f.label :tournament_start, "Start Date"%>
+  </p>
+  <p>
+    <%= f.text_field :tournament_start %>
+  </p>
+
+  <p>
+    <%= f.label :tournament_end, "End Date"%>
+  </p>
+  <p>
+    <%= f.text_field :tournament_end %>
+  </p>
+
+  <p>
+    <%= f.label :tournament_type%>
+  </p>
+  <p>
+    <%= f.text_field :tournament_type%>
+  </p>
+
+  <p>
+    <%= f.label :max_teams%>
+  </p>
+  <p>
+    <%= f.text_field :max_teams%>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,7 @@
+<h2>Tournaments</h2>
+
+<% @tournaments.each do |tournament| %>
+  <li>
+    <h3><%=link_to tournament.tournament_name, tournament_path(tournament)%></h3>
+    <% end %>
+  </li>

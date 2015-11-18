@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root to: "teams#index"
+  root to: "tournaments#index"
   devise_for :users
   resources :teams
+  resources :tournaments
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
