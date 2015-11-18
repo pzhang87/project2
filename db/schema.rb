@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118061757) do
+ActiveRecord::Schema.define(version: 20151118150756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "registrations", force: :cascade do |t|
+    t.integer "tournament_id"
+    t.integer "team_id"
+  end
+
+  add_index "registrations", ["team_id"], name: "index_registrations_on_team_id", using: :btree
+  add_index "registrations", ["tournament_id"], name: "index_registrations_on_tournament_id", using: :btree
 
   create_table "teams", force: :cascade do |t|
     t.datetime "created_at",       null: false
@@ -54,4 +62,6 @@ ActiveRecord::Schema.define(version: 20151118061757) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["team_id"], name: "index_users_on_team_id", using: :btree
 
+  add_foreign_key "registrations", "teams"
+  add_foreign_key "registrations", "tournaments"
 end

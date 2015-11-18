@@ -11,9 +11,12 @@ Areas that need work:
 * Styling (0 styling currently)
 * GOOD seed data
 
-#2015-11-18 0100 EST - Update 2
+#2015-11-18 0130 EST - Update 2
 
 * tournament fields + seed data updated
 * update tournaments show pages next
 
 * eventually: implement aws for file upload
+
+* need - update join tables Tournaments-Registration(Join)-Teams
+* maybe also Teams-Team_Membership(Join)-Users
