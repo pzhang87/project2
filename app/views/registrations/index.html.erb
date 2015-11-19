@@ -1,8 +1,13 @@
 <h2>Registrations</h2>
 
+<!-- JGZ - Even though this is fairly straight forward, I might recommend adding
+in a comment just to lay out exactly what this each enumerable is doing -->
+
   <ul><% @registrations.each do |registration| %>
     <% team = Team.find(registration.team_id) %>
     <li>
+      <!-- Just as an example, though the code overall is readable, there's a lot of "teams" here
+    So just as a helper for others -->
       <%= link_to team.team_name, team_path(team)%>
       <%= link_to "X", tournament_registration_path(@tournament, registration),
       method: "delete" %>

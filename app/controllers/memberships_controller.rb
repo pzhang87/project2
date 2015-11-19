@@ -1,5 +1,8 @@
 class MembershipsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
+  # JGZ - See tournament controller for comments re: @team = Team.find(params[:id])
+
   def index
     @team = Team.all
   end

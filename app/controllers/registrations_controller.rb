@@ -5,6 +5,8 @@ class RegistrationsController < ApplicationController
     @registrations = @tournament.registrations
   end
 
+# JGZ - Are these commented out for a reason? can you remove them?
+
   # def show
   #   @registration = Registration.find(params[:id])
   # end

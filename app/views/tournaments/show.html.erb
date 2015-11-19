@@ -1,4 +1,9 @@
-<div class="col-md12 tournament_name"><h2><%= @tournament.tournament_name %></h2></div>
+<!-- JGZ - I think there is VERY minor indenting that can be changed here (auto-indent ftw!) -->
+<!-- JGZ - move the divs to separate lines like the first div (as an example) -->
+
+<div class="col-md12 tournament_name">
+  <h2><%= @tournament.tournament_name %></h2>
+</div>
 <div class="col-md12 tournament_banner"><span><%= image_tag @tournament.tournament_banner %></span></div>
 <div class="tournament_description"><%= @tournament.tournament_description %></div>
 <div class="tournament_info">Start: <%= @tournament.tournament_start%> || End:
