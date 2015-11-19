@@ -1,1 +1,5 @@
-
+<%= form_for [@tournament, @registration] do |f| %>
+    <%= f.label :teams %>
+    <%= f.collection_select(:team_id, Team.all, :id, :team_name) %>
+    <%= f.submit 'submit', class: 'enter' %>
+<% end %>
