@@ -4,9 +4,12 @@
     <% team = Team.find(registration.team_id) %>
     <li>
       <%= link_to team.team_name, team_path(team)%>
-      <%= link_to "X", tournament_registration_path(@tournament, registration), method: "delete" %>
+      <%= link_to "X", tournament_registration_path(@tournament, registration),
+      method: "delete" %>
       <% end %>
     </li>
   </ul>
 
-<div class="new_registration"><%= link_to "Register Team", new_tournament_registration_path(@tournament)%></div>
+<div class="new_registration">
+  <%= link_to "Register Team", new_tournament_registration_path(@tournament)%>
+</div>

@@ -5,12 +5,12 @@
 <div class="col-md-6 team_description"><%=@team.team_description%></div>
 <div class="col-md-6 team_users">
   <ul>
-    <% @team.users.each do |user|%>
+    <% @team.memberships.each do |membership|%>
+      <% user = User.find(membership.user_id) %>
       <li><%=user.username%></li>
     <% end %>
   </ul>
-  <div class="clearfix"></div>
 
   <div class="team_edit"><%= link_to "Edit Team", edit_team_path%></div>
-  <div class="add_member"><%= link_to "Add Member", "#"%></div>
+  <div class="add_member"><%= link_to "Add Member", "!"%></div>
 </div>

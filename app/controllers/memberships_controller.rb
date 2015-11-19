@@ -1,13 +1,11 @@
-class TeamsController < ApplicationController
-  # load_and_authorize_resource
+class MembershipsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def index
-    @teams = Team.all
+    @team = Team.all
   end
 
   def show
     @team = Team.find(params[:id])
-    authorize! :read, @team
   end
 
   def new

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: "tournaments#index"
   devise_for :users
-  resources :teams
+  resources :teams do
+    resources :memberships
+  end
   resources :tournaments do
     resources :registrations
   end
