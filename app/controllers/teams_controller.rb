@@ -1,6 +1,9 @@
 class TeamsController < ApplicationController
   # load_and_authorize_resource
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
+# JGZ - See tournament controller for comments re: @team = Team.find(params[:id])
+
   def index
     @teams = Team.all
   end
