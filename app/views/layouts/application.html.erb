@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project2</title>
+  <title>Scarlet.gg - a tournament management website</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+  <header>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand"><%= link_to "Scarlet.gg", tournaments_path %></div>
+        </div>
 
-  <h1>Scarlet.gg</h1>
-    <nav>
-      <ul>
-        <li><%= link_to "Tournaments", tournaments_path %></li>
-        <li><%= link_to "Teams", teams_path %></li>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Tournaments", tournaments_path %></li>
+          <li><% if current_user %>
+                <%= link_to "(+)", new_tournament_path %>
+                <% end %></li>
+
+          <li><%= link_to "Teams", teams_path %></li>
+          <li><% if current_user %>
+            <%= link_to "(+)", new_team_path %>
+          <% end %></li>
         <% if current_user %>
-        <li><%= link_to "New Team", new_team_path %></li>
-        <li><%= link_to "New Tournament", new_tournament_path %></li>
-        <li><%= link_to 'Profile', "profile" %></li>
-        <li><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></li>
+          <li><%= link_to 'Profile', "#" %></li>
+          <li><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></li>
         <% else %>
-            <li><%= link_to 'Signup', new_user_registration_path %></li>
-            <li><%= link_to 'Login', new_user_session_path %></li>
+          <li><%= link_to 'Signup', new_user_registration_path %></li>
+          <li><%= link_to 'Login', new_user_session_path %></li>
         <% end %>
       </ul>
     </nav>
+  </header>
 
 <div class="notice"><%= notice %></div>
 <div class="alert"><%= alert %></div>
 
-<%= yield %>
+  <%= yield %>
 
+</div>
 </body>
 </html>
