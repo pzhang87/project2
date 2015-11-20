@@ -21,7 +21,7 @@ participate in so I can act as a tournament host. X
 * As a user, I should be able to view all ongoing tournaments to see which ones
 I would like my team to participate in. X
 
-* As a tournament host, I should be able to add a description, image as well as an external link to the bracket page to provide information for tournament participants.
+* As a tournament host, I should be able to add a description, image as well as an external link to the bracket page to provide information for tournament participants. X
 
 * As a tournament host, I should be able to delete any tournaments that I no longer desire to host, so that other players/teams won't sign up for them.
 
