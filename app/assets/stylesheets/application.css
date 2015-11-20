@@ -14,9 +14,6 @@
  *= require_self
  */
 
-
-
-
 nav li a {
   color: white;
 }
@@ -41,6 +38,6 @@ li {
   list-style: none;
 }
 
-clearfix {
+.clearfix {
   overflow: auto;
 }

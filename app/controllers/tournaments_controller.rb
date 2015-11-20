@@ -1,12 +1,12 @@
 class TournamentsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  # load_and_authorize_resource
+  before_action :set_tournament, only: [:show, :edit, :update, :destroy]
   def index
     @tournaments = Tournament.all
   end
 
   def show
-    @tournament = Tournament.find(params[:id])
+
   end
 
   def new
@@ -19,12 +19,11 @@ class TournamentsController < ApplicationController
   end
 
   def edit
-    @tournament = Tournament.find(params[:id])
+
   end
 
   def update
-    @tournament = Tournament.find(params[:id])
-    @tournament.update(tournament_params)
+    @tournament.update!(tournament_params)
     redirect_to tournament_path(@tournament)
   end
 
@@ -37,6 +36,11 @@ class TournamentsController < ApplicationController
   private
   def tournament_params
     params.require(:tournament).permit(:tournament_name,
-    :tournament_start, :tournament_end, :tournament_type, :max_teams)
+    :tournament_start, :tournament_end, :tournament_type, :max_teams,
+    :tournament_description, :tournament_banner)
+  end
+
+  def set_tournament
+    @tournament = Tournament.find(params[:id])
   end
 end

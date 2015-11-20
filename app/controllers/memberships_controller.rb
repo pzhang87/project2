@@ -1,41 +1,37 @@
 class MembershipsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_membership, only: [:show, :destroy]
   def index
-    @team = Team.all
+    @memberships = Membership.all
   end
 
   def show
-    @team = Team.find(params[:id])
   end
 
   def new
-    @team = Team.new
+    @team = Team.find_by(id: params[:team_id])
+    @membership = Membership.new
   end
 
   def create
-    @team = Team.create(team_params)
-    redirect_to team_path(@team)
-  end
-
-  def edit
-    @team = Team.find(params[:id])
-  end
-
-  def update
-    @team = Team.find(params[:id])
-    @team.update(team_params)
+    @team = Team.find(params[:team_id])
+    @membership = @team.memberships.create(membership_params)
     redirect_to team_path(@team)
   end
 
   def destroy
-    @team = Team.find(params[:id])
-    @team.destroy
-    redirect_to teams_path
+    @team = Team.find(:team_id)
+    @membership.destroy
+    redirect_to team_path(@team)
   end
 
   private
-  def team_params
-    params.require(:team).permit(:team_name,
-    :team_description, :team_logo)
+  def membership_params
+    params.require(:membership).permit(:team_id,
+    :user_id)
+  end
+
+  def set_membership
+    @membership = Membership.find(params[:id])
   end
 end

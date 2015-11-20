@@ -1,7 +1,44 @@
-<div class="col-md12 tournament_name"><h2><%= @tournament.tournament_name %></h2></div>
-<div class="col-md12 tournament_banner"><span><%= image_tag @tournament.tournament_banner %></span></div>
-<div class="tournament_description"><%= @tournament.tournament_description %></div>
-<div class="tournament_info">Start: <%= @tournament.tournament_start%> || End:
-  <%=@tournament.tournament_end %></div>
-<div class="tournament_edit"><%= link_to "Edit Tournament", edit_tournament_path%></div>
-<div class="registrations"><%= link_to "View Registrations", tournament_registrations_path(@tournament)%></div>
+<div class="container-fluid">
+  <div class="well clearfix">
+    <div class="col-md-12 tournament_name">
+      <h2><%= @tournament.tournament_name %></h2>
+    </div>
+
+    <div class="col-md-12 tournament_banner">
+      <%= image_tag @tournament.tournament_banner %>
+    </div>
+  </div>
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="well col-md-4">
+        <ul><h4>Tournament Info</h4>
+          <li>Start Date: <%= @tournament.tournament_start%></li>
+          <li>End Date: <%=@tournament.tournament_end %></li>
+          <li>Type: <%= @tournament.tournament_type %></li>
+          <li>Max Entrants: <%= @tournament.max_teams %></li>
+        </ul>
+      </div>
+      <div class="well col-md-4">
+        <h4>Tournament Description</h4>
+        <%= @tournament.tournament_description %></li>
+      </div>
+      <div class="well col-md-4">
+        <ul><h4>Registrated Teams</h4>
+          <% @tournament.registrations.each do |registration| %>
+            <% team = Team.find(registration.team_id) %>
+          <li> <%= team.team_name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="tournament_edit">
+  <%= link_to "Edit Tournament", edit_tournament_path%>
+</div>
+
+<div class="registrations">
+  <%= link_to "View Registrations", tournament_registrations_path(@tournament)%>
+</div>
