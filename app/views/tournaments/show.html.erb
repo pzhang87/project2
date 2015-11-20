@@ -26,7 +26,7 @@
         <%= @tournament.tournament_description %></li>
       </div>
       <div class="well col-md-4">
-        <ul><h4>Registrated Teams</h4>
+        <ul><h4>Registered Teams</h4>
           <% @tournament.registrations.each do |registration| %>
             <% team = Team.find(registration.team_id) %>
           <li> <%= team.team_name %></li>
