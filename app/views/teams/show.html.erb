@@ -12,7 +12,8 @@
         <li><%=user.email%></li>
       <% end %>
     </ul>
-
-  <div class="team_edit"><%= link_to "Edit Team", edit_team_path%></div>
-  <div class="add_member"><%= link_to "Add Member", new_team_membership_path(@team)%></div>
+  <% if current_user %>
+    <div class="team_edit"><%= link_to "Edit Team", edit_team_path%></div>
+    <div class="add_member"><%= link_to "Add Member", new_team_membership_path(@team)%></div>
+  <% end %>
 </div>
