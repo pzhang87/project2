@@ -50,8 +50,12 @@ have to keep using Nick Cage placeholder images.
 
 * Self-referential Joins and other Models: My original ERD featured Matches between
 Teams, which also belonged to a Tournament somehow. I imagine this could be done
-via Brackets as a join-table (i.e. Matches > Bracket - Tournament). I'd also add
-Profiles which would allow them to see their Teams, Tournaments, and stats
+via Brackets as a join-table (i.e. Matches > Bracket - Tournament). Eventually,
+even some logic could be implemented to organize Matches in their Brackets -
+order of Matches, Rounds, etc.
+
+I'd also add Profiles which would allow them to see their Teams, Tournaments,
+and stats.
 
 ###Other Comments:
 I made some very poor life decisions before beginning work on this project, so
