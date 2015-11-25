@@ -1,5 +1,6 @@
 <%= form_for [@team, @membership] do |f| %>
     <%= f.label :memberships, "Add Member" %>
     <%= f.collection_select(:user_id, User.all, :id, :email) %>
+    <!-- NHO: nice collection_select! ^ -->
     <%= f.submit 'submit', class: 'enter' %>
 <% end %>

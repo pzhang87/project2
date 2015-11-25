@@ -1,6 +1,7 @@
 class MembershipsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_membership, only: [:show, :destroy]
+  #NHO: what about another before_action :set_team to DRY up this code?
   def index
     @memberships = Membership.all
   end
@@ -9,7 +10,7 @@ class MembershipsController < ApplicationController
   end
 
   def new
-    @team = Team.find_by(id: params[:team_id])
+    @team = Team.find_by(id: params[:team_id]) # NHO: think .find is all you need here
     @membership = Membership.new
   end
 

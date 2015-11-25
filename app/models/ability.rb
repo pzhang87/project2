@@ -1,6 +1,9 @@
 class Ability
   include CanCan::Ability
 
+  # NHO: Great start on user authorization! How could you lock down, edit, update, and destroy?
+  # What are some of the business rules of this app?
+
   def initialize(user)
     can :read, :all
 
