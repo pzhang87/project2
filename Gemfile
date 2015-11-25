@@ -51,3 +51,5 @@ gem 'devise'
 # CanCanCan for user authorizations
 
 gem 'cancancan', '~> 1.10'
+
+# NHO: Where is the gem `rails_12factor` for production?

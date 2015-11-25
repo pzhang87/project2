@@ -27,7 +27,7 @@ class TeamsController < ApplicationController
   end
 
   def destroy
-    @team = Team.find(params[:id])
+    @team = Team.find(params[:id]) # NHO: Don't think this line is necessary because of set_team before_action
     @team.destroy
     redirect_to teams_path
   end

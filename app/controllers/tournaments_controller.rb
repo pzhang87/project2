@@ -28,7 +28,7 @@ class TournamentsController < ApplicationController
   end
 
   def destroy
-    @tournament = Tournament.find(params[:id])
+    @tournament = Tournament.find(params[:id]) # NHO: Don't think this line is necessary because of set_team before_action
     @tournament.destroy
     redirect_to tournaments_path
   end

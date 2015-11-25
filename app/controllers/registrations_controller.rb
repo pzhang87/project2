@@ -5,6 +5,7 @@ class RegistrationsController < ApplicationController
     @registrations = @tournament.registrations
   end
 
+# NHO: Reminder to remove unused/commented out code
   # def show
   #   @registration = Registration.find(params[:id])
   # end
@@ -21,6 +22,7 @@ class RegistrationsController < ApplicationController
     redirect_to tournament_registrations_path(@tournament)
   end
 
+# NHO: Reminder to remove unused/commented out code
   # def edit
   #   @team = Team.find(params[:id])
   # end

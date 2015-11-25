@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   root to: "tournaments#index"
   devise_for :users
   resources :teams do
-    resources :memberships
+    resources :memberships # NHO: How could we limit the routes we want from this nested resource?
   end
   resources :tournaments do
-    resources :registrations
+    resources :registrations # NHO: How could we limit the routes we want from this nested resource?
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
