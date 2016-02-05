@@ -1,7 +1,9 @@
 <h2>Teams</h2>
 
 <% @teams.each do |team| %>
+<div class="well">
   <li>
-    <h3><%=link_to team.team_name, team_path(team)%></h3>
-    <% end %>
+    <h4><%=link_to team.team_name, team_path(team)%></h4>
   </li>
+</div>
+<% end %>

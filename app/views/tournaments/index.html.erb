@@ -1,8 +1,8 @@
 <h2>Tournaments</h2>
-<div class="well">
 <% @tournaments.each do |tournament| %>
+<div class="well">
   <li>
-    <h3><%=link_to tournament.tournament_name, tournament_path(tournament)%></h3>
-    <% end %>
+    <h4><%=link_to tournament.tournament_name, tournament_path(tournament)%></h4>
   </li>
 </div>
+<% end %>
